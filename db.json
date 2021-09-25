@@ -1,0 +1,12 @@
+{
+    "person":[
+        {"id":1,"name":"person1","stressstatus": "high"},
+        {"id":2,"name":"person1","stressstatus": "high"},
+        {"id":3,"name":"person1","stressstatus": "high"},
+    ],
+    "admin":[
+        {"id":1,"username":"admin","password": "1111"},
+ 
+    ],
+
+}

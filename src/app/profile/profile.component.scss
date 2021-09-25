@@ -1,0 +1,14 @@
+@import '../styles/colors';
+.card{
+    border: 1px solid $blue
+
+}
+.btn{
+    background-color:$blue;
+    color:$white;
+    &:hover{
+        background-color:$white;
+        color:$blue;
+    }
+
+}

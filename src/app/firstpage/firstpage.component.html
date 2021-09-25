@@ -1,0 +1,36 @@
+<app-chart></app-chart>
+<div class="col-md-12 col-lg-12 col-sm-12 p-0 mt-4 card">
+    <table mat-table [dataSource]="dataSource" class="w-100  " matSort >
+
+        <!--- Note that these columns can be defined in any order.
+              The actual rendered columns are set as a property on the row definition" -->
+      
+   
+        <!-- Name Column -->
+        <ng-container matColumnDef="Name" >
+          <th mat-header-cell *matHeaderCellDef  mat-sort-header > Name </th>
+          <td mat-cell *matCellDef="let element"  > {{element.name}} </td>
+        </ng-container>
+        <!-- stress level Column -->
+        <ng-container matColumnDef="stressLevel" >
+            <th mat-header-cell *matHeaderCellDef  mat-sort-header > Stress Level </th>
+            <td mat-cell *matCellDef="let element"  > {{element.stresslevel}} </td>
+          </ng-container>
+       
+          <!--  time Column -->
+          <ng-container matColumnDef="Time" >
+            <th mat-header-cell *matHeaderCellDef  mat-sort-header > Time </th>
+            <td mat-cell *matCellDef="let element"  > {{element.time}} </td>
+          </ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+       
+      </table>  
+      
+      <div *ngIf="!dataSource.data.length">
+        <div class=" mt-2 d-flex justify-content-center ">
+          No Records Found!
+        </div>
+      </div>  
+      <mat-paginator [pageSizeOptions]="[5, 10, 20]" [pageSize]="8" showFirstLastButtons></mat-paginator>
+</div>
